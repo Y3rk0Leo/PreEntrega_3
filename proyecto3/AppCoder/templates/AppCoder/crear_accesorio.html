@@ -1,0 +1,24 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block contenido %}
+<div class="mt-5">
+    <h1 class="mb-3">Crear Accesorio</h1>
+    <div class="card">
+        <div class="card-body">
+            <form method="POST">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-primary">Guardar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

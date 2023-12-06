@@ -1,0 +1,42 @@
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Inicio</a></li>                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Productos
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><a class="nav-link" href='{%url 'crear_producto'%}'>Producto</a></li>
+                                <li class="nav-item"><a class="nav-link" href='{%url 'buscar_producto'%}'>Buscar Producto</a></li>
+                                <li class="nav-item"><a class="nav-link" href='{%url 'listar_producto'%}'>Listar Producto</a></li>                                           
+                            </ul>                            
+                        </li>   
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Catalogos
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><a class="nav-link" href='{%url 'crear_catalogo'%}'>Nuevo Catalogo</a></li>
+                                <li class="nav-item"><a class="nav-link" href='{%url 'buscar_catalogo'%}'>Buscar Catalogo</a></li>
+                                <li class="nav-item"><a class="nav-link" href='{%url 'listar_catalogo'%}'>Listar Catalogo</a></li>                                           
+                            </ul>                            
+                        </li>  
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Accesorios
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><a class="nav-link" href='{%url 'crear_accesorio'%}'>Nuevo Accesorio</a></li>
+                                <li class="nav-item"><a class="nav-link" href='{%url 'buscar_accesorio'%}'>Buscar Accesorio</a></li>
+                                <li class="nav-item"><a class="nav-link" href='{%url 'listar_accesorio'%}'>Listar Accesorio</a></li>                                           
+                            </ul>                            
+                        </li>  
+                    </ul>
+                </div>
+            </div>
+        </nav>

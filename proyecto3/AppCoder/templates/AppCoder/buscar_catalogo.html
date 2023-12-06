@@ -1,0 +1,54 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block contenido %}
+<div class="row">  
+    <div class="col-8 mx-auto mt-5 mb-5">
+      <div class="card">
+        
+        <div class="card-body mx-auto">  
+          <form class="row g-3" method="POST" action="../buscar_catalogo/" > 
+            {% csrf_token %}
+            <div class="col-auto mt-4" >Buscar:</div>        
+            <div class="col-auto" >
+                       
+              <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Aceptar</button>
+            </div>
+          </form>  
+        </div>
+      </div>
+      {% if catalogos.count > 0 %}
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Nombre</th>  
+              </tr>
+            </thead>
+            <tbody>
+                {% for cata in catalogos  %}
+              <tr>
+                
+                <td>{{cata.id}}</td>
+                <td>{{cata.nombre}}</td>              
+                
+              </tr>
+              {% endfor %}
+            
+            </tbody>
+          </table>      
+      {% endif %}
+  
+      {% if catalogos.count == 0 %}
+      <div class="alert alert-warning mt-3" role="alert">
+          {{valida}} 
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  
+  {% endblock %}
+
+
